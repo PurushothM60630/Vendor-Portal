@@ -1,0 +1,37 @@
+<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Navbar</a></li>
+    <li><a href="#">Credit Memo</a></li>
+  </ul>
+  <div id="print-section">
+  <table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">Action</th>
+        <th scope="col">Purchase Document</th>
+        <th scope="col">Vendor ID</th>
+        <th scope="col">Accounting Document NO</th>
+        <th scope="col">Fiscal Year</th> 
+      <!--  <th scope="col">Document Type</th> -->
+        <th scope="col">Invoice Date</th>
+        <th scope="col">Company Code</th>
+        <th scope="col">Company Name</th>
+      <!--  <th scope="col">Transaction/Event Type</th> --> 
+      </tr>
+    </thead>
+   <tbody> 
+      <tr *ngFor= "let cm of cm">
+        <td><button mat-raised-button (click)="opendialog(cm.EBELN)">Item Details</button></td>
+        <td>{{cm.EBELN}}</td>
+        <td>{{cm.LIFNR}}</td>
+        <td>{{cm.BELNR}}</td>
+        <td>{{cm.GJAHR}}</td>
+      <!--  <td>{{cm.BLART}}</td> -->
+        <td>{{cm.BLDAT}}</td>
+        <td>{{cm.BUKRS}}</td>
+        <td>{{cm.BUTXT}}</td>
+      <!--  <td>{{cm.VGART}}</td> -->
+      </tr> 
+    </tbody> 
+  </table>
+</div>

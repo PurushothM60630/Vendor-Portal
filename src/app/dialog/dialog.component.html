@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Item Details</h2>
+<table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">Material Number</th>
+        <th scope="col">Item Description</th>
+        <th scope="col">Material group</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Unit Of Measure</th>
+      <!--  <th scope="col">Currency</th> -->
+        <th scope="col">Net Value</th>
+        <th scope="col">Net Price</th>
+      </tr>
+    </thead>
+   <tbody> 
+      <tr *ngFor= "let po of json">
+        <td>{{+po.MATNR}}</td>
+        <td>{{po.TXZ01}}</td>
+        <td>{{po.MATKL}}</td>
+        <td>{{po.MENGE}}</td>
+        <td>{{po.MEINS}}</td>
+      <!--  <td>{{po.WAERS}}</td> -->
+        <td>{{po.NETPR}}</td>
+        <td>{{po.NETWR}}</td>
+      </tr> 
+    </tbody> 
+  </table>
+<mat-dialog-actions >
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

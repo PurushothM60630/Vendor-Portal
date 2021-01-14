@@ -1,0 +1,34 @@
+<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Navbar</a></li>
+    <li><a href="#">Payment OverDues</a></li>
+  </ul>
+  <div id="print-section">
+  <table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">Vendor ID</th>
+        <th scope="col">posting Date</th>
+        <th scope="col">Purchase Document</th>
+        <th scope="col">Amount In LC</th>
+      <!--  <th scope="col">Tax In LC</th> --> 
+        <th scope="col">Baseline Due Date</th>
+      <!--  <th scope="col">Terms Of Payment</th>
+        <th scope="col">Cash Discount Days 1</th>-->
+      </tr>
+    </thead>
+   <tbody> 
+      <tr *ngFor= "let paymentods of paymentods">
+        
+        <td>{{paymentods.LIFNR}}</td>
+        <td>{{paymentods.BUDAT}}</td>
+        <td>{{paymentods.EBELN}}</td>
+        <td>{{paymentods.DMBTR}}</td>
+      <!--  <td>{{paymentods.MWSTS}}</td> -->
+        <td>{{paymentods.ZFBDT}}</td>
+     <!--   <td>{{paymentods.ZTERM}}</td>
+        <td>{{paymentods.ZBT1T}}</td>   -->
+      </tr> 
+    </tbody> 
+  </table>
+</div>

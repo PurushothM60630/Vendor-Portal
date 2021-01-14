@@ -1,0 +1,47 @@
+<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Navbar</a></li>
+    <li><a href="#">PurchaseOrder</a></li>
+  </ul>
+  <div id="print-section">
+  <table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">Action</th>
+        <th scope="col">Purchase Document</th>
+        <th scope="col">Vendor ID</th>
+        <th scope="col">Created On</th> 
+        <th scope="col">Created By</th>   
+        <th scope="col">Category</th>
+        <th scope="col">Document Type</th> 
+        <th scope="col">Currency Key</th>
+      <!--  <th scope="col">Inquiry Valid From</th>-->
+        <th scope="col">End Of Validity</th>
+        <th scope="col">Purchase Organization</th>
+      <!--<th scope="col">Plant</th> -->
+        <th scope="col">Company Name</th>
+      <!--  <th scope="col">Status</th> --> 
+      <!--  <th scope="col">Item NO</th> -->
+      </tr>
+    </thead>
+   <tbody> 
+      <tr *ngFor= "let po of po">
+        <td><button mat-raised-button (click)="opendialog(po.EBELN)">Item Details</button></td>
+        <td >{{po.EBELN}}</td>
+        <td>{{po.LIFNR}}</td>
+        <td>{{po.AEDAT}}</td>
+        <td>{{po.ERNAM}}</td>
+        <td>{{po.BSTYP}}</td>
+        <td>{{po.BSART}}</td>
+        <td>{{po.WAERS}}</td>
+      <!--  <td>{{po.ANGDT}}</td> -->
+        <td>{{po.KDATE}}</td>
+        <td>{{po.EKORG}}</td>
+      <!--  <td>{{po.WERKS}}</td> -->
+        <td>{{po.BUTXT}}</td>
+      <!--  <td>{{po.STATU}}</td> -->
+    <!--<td>{{po.ANGDT}}</td>  -->
+      </tr> 
+    </tbody> 
+  </table>
+</div>

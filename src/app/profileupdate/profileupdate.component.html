@@ -1,0 +1,92 @@
+<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Navbar</a></li>
+    <li><a href="#">ProfileUpdate</a></li>
+  </ul>
+  
+    <div class="col-md-6" >
+        <div class="card">
+            <div class="card-header" >
+                <h1 class="card-title">User  Profile</h1>
+            </div>
+            
+            <div class="card-body">
+                <form [formGroup]="userform" autocomplete="off">
+                    <div class="row">
+                      <div class="col-md-6" >
+                        <div class="form-group">
+                            <label>Name :</label>
+                          <input type="text" formControlName="Name"  placeholder="Name" class="form-control" id="AdminForm"  >
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Vendor ID :</label>
+                          <input type="text" formControlName="VendorID" placeholder="Vendor ID" class="form-control"  >
+                        </div> 
+                      </div>
+                    </div>
+                        <hr style="width: auto;">
+                        <label>Address :</label>
+                        <textarea formControlName="Address" class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Address" ></textarea>
+                        <hr style="width: auto;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>City :</label>
+                                  <input formControlName="City" type="text" placeholder="City"  class="form-control"  >
+                                </div>
+                              </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                  <label>State :</label>
+                                <input formControlName="State"type="text" placeholder="State" class="form-control"  >
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label>Country :</label>
+                                <input formControlName="Country" type="text" placeholder="Country"  class="form-control" >
+                              </div>
+                            </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Pincode :</label>
+                              <input formControlName="Pincode" type="text" placeholder="Pincode" class="form-control" >
+                            </div>
+                          </div>
+                      </div>
+                      <hr style="width: auto;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Contact Detail:</label>
+                                  <input formControlName="Phonenumber" type="text"  class="form-control" placeholder="Phone Number" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                  <label>Fax :</label>
+                                <input formControlName="Fax" type="text"  class="form-control" placeholder="Fax" >
+                              </div>
+                          </div>
+                        </div>
+                   <div class="row">
+                      <div class="col-md-6 text-center">
+                          <div class="form-group">
+                        <button mat-raised-button (click) =" enableformgroup() " >Edit</button>
+                        </div>
+                      </div>
+                      <div class="col-md-6 text-center">
+                        <div class="form-group">
+                      <button  mat-raised-button (click) =" disableformgroup() "class="movebutton" >Save</button>
+                      </div>
+                  </div>
+                   </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,50 @@
+<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Navbar</a></li>
+    <li><a href="#">Goods Receipt</a></li>
+  </ul>
+<div id="print-section">
+  <table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">Action</th>
+        <th scope="col">Vendor ID</th>
+        <th scope="col">Purchase Document</th>
+        <th scope="col">Material Document</th>
+        <th scope="col">Year of Material Doc</th>
+        <th scope="col">Document Date</th>
+        <th scope="col">Posting Date</th>
+        <th scope="col">Entry Date</th>
+        <th scope="col">Entry Time</th>
+        <th scope="col">Currency</th>
+      <!-- <th scope="col">Document Item</th> --> 
+        <th scope="col">Movement Type</th>
+       <!-- <th scope="col">Plant</th> -->
+        <th scope="col">Company code</th>
+        <th scope="col">Company Name</th>
+        <th scope="col">Storage Location</th>
+      </tr>
+    </thead> 
+    <tbody>
+       <tr *ngFor= "let gr of gr">
+        <td><button mat-raised-button (click)="opendialog(gr.EBELN)">Item Details</button></td>
+        <td>{{gr.LIFNR}}</td>
+        <td>{{gr.EBELN}}</td>
+        <td>{{gr.MBLNR}}</td>
+        <td>{{gr.MJAHR}}</td>
+        <td>{{gr.BLDAT}}</td>
+        <td>{{gr.BUDAT}}</td>
+        <td>{{gr.CPUDT}}</td>
+        <td>{{gr.CPUTM}}</td>
+        <td>{{gr.WAERS}}</td>
+     <!--   <td>{{gr.ZEILE}}</td> -->
+        <td>{{gr.BWART}}</td>
+     <!--  <td>{{gr.WERKS}}</td> -->
+        <td>{{gr.BUKRS}}</td>
+        <td>{{gr.BUTXT}}</td>
+        <td>{{gr.LGORT}}</td>
+      </tr> 
+    </tbody>
+  </table>
+</div>
+  

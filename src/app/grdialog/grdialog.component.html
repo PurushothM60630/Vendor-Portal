@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Item Details</h2>
+<table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">Document Item</th>
+        <th scope="col">Material Number</th>
+        <th scope="col">Material Description</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Unit Of Measure</th>
+      <!--  <th scope="col">currency</th> -->
+        <th scope="col">Amount in LC</th>
+        <th scope="col">Quantity in unit of entry</th>
+        <th scope="col">Unit of entry</th>
+        <th scope="col">Quantity in PO price unit</th>
+        <th scope="col">Order Price Unit Information</th>
+      </tr>
+    </thead>
+   <tbody> 
+      <tr *ngFor= "let gr of json">
+        <td>{{gr.ZEILE}}</td>
+        <td>{{+gr.MATNR}}</td>
+        <td>{{gr.MAKTX}}</td>
+        <td>{{gr.MENGE}}</td>
+        <td>{{gr.MEINS}}</td>
+      <!--  <td>{{gr.WAERS}}</td> -->
+        <td>{{gr.DMBTR}}</td>
+        <td>{{gr.ERFMG}}</td>
+        <td>{{gr.ERFME}}</td>
+        <td>{{gr.BPMNG}}</td>
+        <td>{{gr.BPRME}}</td>
+      </tr> 
+    </tbody> 
+  </table>
+<mat-dialog-actions >
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

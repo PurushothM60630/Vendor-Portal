@@ -1,0 +1,37 @@
+<ul class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Navbar</a></li>
+  <li><a href="#">Invoice</a></li>
+</ul>
+<div id="print-section">
+  <table class="table">
+    <thead class="black white-text">
+      <tr>
+        <th scope="col">Action</th>
+        <th scope="col">Vendor ID</th>
+        <th scope="col">Accounting Document NO</th>
+        <th scope="col">Fiscal Year</th>
+        <th scope="col">Document Type</th>
+        <th scope="col">Posting Date</th>
+        <th scope="col">Debit/Credit Indicator</th>
+        <th scope="col">G/L Account</th>
+        <th scope="col">Company Code</th>
+        <th scope="col">Company Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vinvoice of vinvoice">
+        <td><button mat-raised-button (click)="opendialog(vinvoice.BELNR)">Item Details</button></td>
+        <td>{{vinvoice.LIFNR}}</td>
+        <td>{{vinvoice.BELNR}}</td>
+        <td>{{vinvoice.GJAHR}}</td>
+        <td>{{vinvoice.BLART}}</td>
+        <td>{{vinvoice.BUDAT}}</td>
+        <td>{{vinvoice.SHKZG}}</td>
+        <td>{{vinvoice.SAKNR}}</td>
+        <td>{{vinvoice.BUKRS}}</td>
+        <td>{{vinvoice.BUTXT}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

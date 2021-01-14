@@ -1,0 +1,64 @@
+<ul class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Navbar</a></li>
+  <li><a href="#">QuotationData</a></li>
+</ul>
+<div id="print-section">
+  <table class="table">
+    <thead class="black white-text">
+      <tr class="tbcolor"> 
+        <th scope="col">Action</th>
+      
+      <!--  <th scope="col">Purchasing Document Number</th> 
+        <th scope="col">Order Type </th>
+        <th scope="col">Purchasing Document Category</th> -->
+        <th scope="col">Quotation Number</th>
+        <th scope="col">Created On</th>
+        <th scope="col">Created By</th>
+      <!--  <th scope="col">Purchasing Organization</th> -->
+        <th scope="col">Company Code</th> 
+        <th scope="col">Name of Company</th>
+      <!--  <th scope="col">Purchasing Group</th> -->
+        <th scope="col">Account Number of Vendor</th>
+      <!--  <th scope="col">Purchase Order Date</th> -->
+      <!--  <th scope="col">Currency Key</th> -->
+      <!--  <th scope="col">Quotation Validity Date</th> -->
+        <th scope="col">End of Validity Period</th> 
+      <!--  <th scope="col">Item Number of Purchasing Document</th>
+        <th scope="col">Material No.</th>
+        <th scope="col">Short Text</th>
+        <th scope="col">Purchase Order Quantity</th> 
+        <th scope="col">Base Unit of Measure</th> 
+        <th scope="col">Net price</th>
+        <th scope="col">Net Value</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let quotation of quotation">
+        <td><button mat-raised-button (click)="opendialog(quotation.EBELN)">Item Details</button></td>
+      <!--  <td>{{quotation.BUKRS}}</td> -->
+      <!--  <td>{{quotation.EBELN}}</td> 
+        <td>{{quotation.BSART}}</td>
+        <td>{{quotation.BSTYP}}</td> -->
+        <td>{{quotation.ANGNR}}</td>
+        <td>{{quotation.AEDAT}}</td>
+        <td>{{quotation.ERNAM}}</td>
+        <td>{{quotation.BUKRS}}</td>
+        <td>{{quotation.BUTXT}}</td>
+      <!--  <td>{{quotation.EKGRP}}</td> -->
+        <td>{{quotation.LIFNR}}</td>
+      <!--  <td>{{quotation.BEDAT}}</td> -->
+      <!--  <td>{{quotation.WAERS}}</td> -->
+      <!--  <td>{{quotation.ANGDT}}</td> -->
+        <td>{{quotation.KDATE}}</td>    
+      <!--  <td>{{quotation.EBELP}}</td>
+        <td>{{quotation.MATNR}}</td> 
+        <td>{{quotation.TXZ01}}</td>
+        <td>{{quotation.MENGE}}</td>
+        <td>{{quotation.MEINS}}</td>
+        <td>{{quotation.NETPR}}</td>
+        <td>{{quotation.NETWR}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,73 @@
+<mat-toolbar id="mainToolbar" color="primary">
+    <mat-icon
+      (click)="onToolbarMenuToggle()"
+      id="toolbarMenu">menu</mat-icon>
+    Vendor Portal
+    <span class="toolbar-spacer"></span>
+    <mat-icon
+      class="toolbar-icon" (click) = "logout()"
+    >logout</mat-icon>
+  </mat-toolbar> 
+  
+  <mat-sidenav-container
+    id="sidenavContainer"
+   fullscreen>
+    <mat-sidenav
+      mode="side"
+      
+      id="sidenav"
+      [class.menu-open]="isMenuOpen"
+      [class.menu-close]="!isMenuOpen"
+      opened>
+      
+      <mat-list id="menus">
+        
+        <mat-list-item >
+            <button 
+            class="menu-item"
+              mat-flat-button  [routerLink]="['../navbar/Profileupdate']" >
+              <mat-icon>account_circle</mat-icon>
+            Profile Update</button>
+          </mat-list-item>
+
+        <mat-list-item>
+          <button [routerLink]="['../navbar/Dashboard']"class="menu-item"mat-flat-button> <mat-icon>dashboard</mat-icon> Dashboard </button>
+            <!--<button [routerLink]="['../navbar/inquirydata']"mat-menu-item style="padding-left: 60px;padding-right: 60px;">Inquiry data</button>
+            <button [routerLink]="['../navbar/saleorderdata']"mat-menu-item style="padding-left: 60px;padding-right: 60px;">Sale Order Data</button>
+            <button [routerLink]="['../navbar/listofdata']"mat-menu-item style="padding-left: 60px;padding-right: 60px;">List Of Delivery</button> -->
+        </mat-list-item>
+        <mat-list-item>
+          <button [routerLink]="['../navbar/Quotation']"class="menu-item" mat-flat-button > <mat-icon>assignment</mat-icon> Quotation </button>
+        </mat-list-item>
+        <mat-list-item>
+          <button [routerLink]="['../navbar/Purchaseorder']"class="menu-item"mat-flat-button> <mat-icon>shopping_cart</mat-icon> Purchase Order</button>
+        </mat-list-item>
+        <mat-list-item>
+          <button [routerLink]="['../navbar/Goodsreceipt']"class="menu-item"mat-flat-button> <mat-icon> local_shipping</mat-icon> Goods Receipt </button>
+        </mat-list-item>
+        <mat-list-item>
+            <button 
+            class="menu-item"
+              mat-flat-button [matMenuTriggerFor]="accountBalanceMenu">
+              <mat-icon>account_balance</mat-icon>
+            Financial Sheet <mat-icon style="margin-left: 22px;">expand_more</mat-icon></button>
+            <mat-menu #accountBalanceMenu="matMenu" xPosition="after">
+              <button [routerLink]="['../navbar/vinvoice']" mat-menu-item style="padding-left: 60px;padding-right: 60px;">Invoice Details</button>
+              <button [routerLink]="['../navbar/paymentoverdues']"mat-menu-item style="padding-left: 60px;padding-right: 60px;">Payment Overdues</button>
+              <button [routerLink]="['../navbar/vcreditmemo']"mat-menu-item style="padding-left: 60px;padding-right: 60px;">Credit Memo</button>
+            </mat-menu>
+
+          </mat-list-item>
+  
+          
+      </mat-list>
+    </mat-sidenav>
+  
+  <mat-sidenav-content [ngStyle]="{ 'margin-left.px': contentMargin }" >
+      <div class = "progress-bar" *ngIf="_loginservice.isLoading | async " >
+        <mat-progress-bar color="grey" mode="indeterminate" value="40"></mat-progress-bar>
+      </div> 
+     <router-outlet>     </router-outlet> 
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
